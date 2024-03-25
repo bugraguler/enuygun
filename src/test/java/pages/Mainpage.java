@@ -46,17 +46,6 @@ public class Mainpage extends CommonMethods {
     @FindBy(xpath = "//button[@data-testid='enuygun-homepage-flight-submitButton']")
     public WebElement searchButton;
 
-
-
-
-
-
-
-
-    /*@FindBy(xpath = "//button[@data-testid= 'datepicker-active-day']")
-    public WebElement allDaysOfMonth;*/
-
-
     @FindBy (xpath = "(//button[@data-testid ='datepicker-active-day'])")
     public List<WebElement>  firstMonthActiveDepartureDays;
 
@@ -71,8 +60,7 @@ public class Mainpage extends CommonMethods {
 
     @FindBy(xpath = "//button[@data-testid= 'enuygun-homepage-flight-returnDate-month-forward-button']")
     public WebElement returnMonthForwardButton;
-
-
+    
     public Mainpage() {
         PageFactory.initElements(driver, this);
     }

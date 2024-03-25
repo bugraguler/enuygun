@@ -34,10 +34,6 @@ public class FlightDisplayPage extends CommonMethods {
     public List<WebElement> thyFlightsDepTimeList;
 
 
-
-
-
-
     public FlightDisplayPage() {
         PageFactory.initElements(driver, this);
     }

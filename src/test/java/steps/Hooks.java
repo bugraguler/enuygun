@@ -12,7 +12,7 @@ public class Hooks extends CommonMethods {
         openBrowserAndLaunchApplication();
     }
 
-    /*@After
+    @After
     public void end(Scenario scenario) {
         byte[] pic;
         //scenario class from cucumber holds the complete information of our execution
@@ -23,10 +23,8 @@ public class Hooks extends CommonMethods {
         }
         //it will attach the pic in report
         scenario.attach(pic,"image/png",scenario.getName());
-
-
         tearDown();
     }
-*/
+
 
 }

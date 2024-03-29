@@ -22,6 +22,9 @@ public class Mainpage extends CommonMethods {
     @FindBy(xpath = "//input[@name = 'destination']")
     public WebElement nereyeField;
 
+    @FindBy(xpath = "//div[@class ='Tab-module_separated-panels__7v5sO']")
+    public WebElement bosAlan;
+
     @FindBy(xpath = "//div[text() = 'Gidiş Tarihi']")
     public WebElement gidisTarihiField;
 
@@ -60,7 +63,7 @@ public class Mainpage extends CommonMethods {
 
     @FindBy(xpath = "//button[@data-testid= 'enuygun-homepage-flight-returnDate-month-forward-button']")
     public WebElement returnMonthForwardButton;
-    
+
     public Mainpage() {
         PageFactory.initElements(driver, this);
     }

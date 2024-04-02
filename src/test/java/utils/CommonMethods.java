@@ -58,7 +58,7 @@ public class CommonMethods extends PageInitializers {
          */
 
     public static WebDriverWait getWait() {
-        WebDriverWait wait = new WebDriverWait(driver, Constants.EXPLICIT_WAIT);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constants.EXPLICIT_WAIT));
         return wait;
     }
 

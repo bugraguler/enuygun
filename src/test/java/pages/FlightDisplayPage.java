@@ -13,16 +13,14 @@ public class FlightDisplayPage extends CommonMethods {
     @FindBy(xpath = "//span[text() = 'Gidiş kalkış / varış saatleri']")
     public WebElement gidisKalkisVarisSaatleri;
 
-    @FindBy(xpath = "//div[@class='rc-slider-handle rc-slider-handle-2']")
+    @FindBy(xpath = "(//div[@class='rc-slider-handle rc-slider-handle-1'])[1]")
     public WebElement gidisSaatiSlider1;
 
-    @FindBy(xpath = "//div[@class='rc-slider-handle rc-slider-handle-2']")
+    @FindBy(xpath = "(//div[@class='rc-slider-handle rc-slider-handle-2'])[1]")
     public WebElement gidisSaatiSlider2;
 
-    @FindBy (xpath = "(//div[@class = 'flight-departure-time']")
+    @FindBy (xpath = "//div[@class = 'flight-departure-time']")
     public List<WebElement> gidisKalkisSaatlerListesi;
-
-
 
     @FindBy(xpath = "//div[@class ='ctx-filter-airline card-header']")
     public WebElement airlineCompanySelect;
@@ -30,8 +28,8 @@ public class FlightDisplayPage extends CommonMethods {
     @FindBy(xpath = "//input[@id = 'TKairlines']")
     public WebElement thySelect;
 
-    @FindBy(xpath = "//div[@data-testid= 'departureTime']")
-    public List<WebElement> thyFlightsDepTimeList;
+    @FindBy(xpath = "//div[@data-testid= 'flightInfoPrice']")
+    public List<WebElement> thyFlightsPriceList;
 
 
     public FlightDisplayPage() {

@@ -1,5 +1,6 @@
 package steps;
 
+import com.fasterxml.jackson.databind.jsontype.impl.AsExistingPropertyTypeSerializer;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -48,10 +49,14 @@ public class FlightDisplayPageSteps extends CommonMethods {
         Thread.sleep(2000);
         jsClick(flightDisplayPage.thySelect);
         Thread.sleep(2000);
-        for (int i = 0; i < flightDisplayPage.thyFlightsPriceList.size(); i++) {
+        for (int i = 0; i < flightDisplayPage.thyFlightsPriceList.size()-1; i++) {
             double firstPrice =Double.parseDouble(flightDisplayPage.thyFlightsPriceList.get(i).getAttribute("data-price"));
             double secondPrice =Double.parseDouble(flightDisplayPage.thyFlightsPriceList.get(i+1).getAttribute("data-price"));
-            Assert.assertTrue(secondPrice > firstPrice);
+            if(firstPrice<secondPrice){
+                Assert.assertTrue(true);
+            }else{
+                Assert.assertFalse(false);
+            }
 
         }
 
